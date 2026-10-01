@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Overall frame and grid structure */
+.canvas {
+  width: 400px;
+  height: 400px;
+  background-color: #0d0d0d; /* Black grid lines */
+  display: grid;
+  grid-template-columns: 80px 240px 80px;
+  grid-template-rows: 130px 150px 80px 40px;
+  gap: 9px; /* Thick black borders */
+  border: 9px solid #0d0d0d;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Common box styling */
+.box {
+  background-color: #fff4db; /* Off-white canvas tone */
+}
+
+/* Specific colored panels */
+.red {
+  background-color: #dd0100;
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.blue {
+  background-color: #2682d2;
+  grid-column: 1;
+  grid-row: 3 / span 1;
+}
+
+.yellow {
+  background-color: #f7d000;
+  grid-column: 3;
+  grid-row: 4 / span 1  ;
+}
+
+/* Positioning for the remaining white blocks */
+.white-top-left {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.white-bottom-middle {
+  grid-column: 2;
+  grid-row: 3 / span 2;
+}
+
+.white-right-top {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.white-right-middle {
+  grid-column: 3;
+  grid-row: 3;
+}
